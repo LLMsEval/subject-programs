@@ -1,4 +1,4 @@
-# Codes for the Paper: “Evaluating Reasoning-Capable vs. Standard LLMs for Arduino Code Generation”
+# Subject programs for the Paper: “Evaluating Reasoning Capabilities of Large Language Models for Arduino Code Generation”
 
 ## Overview
 Large Language Models (LLMs) are increasingly used to turn natural-language prompts into executable code. This repository accompanies the paper **“Evaluating Reasoning Capabilities of Large Language Models for Arduino Code Generation”** and provides the artifacts used to assess LLMs on **resource-constrained** microcontrollers. We compare **reasoning-capable** LLMs (GPT-o4-mini, DeepThink R1) with **standard** LLMs (GPT-4o, DeepSeek-V3) on correctness, efficiency, complexity, and similarity for **Arduino Uno Rev3** tasks.
