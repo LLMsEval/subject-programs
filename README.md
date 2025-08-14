@@ -6,10 +6,10 @@ Large Language Models (LLMs) are increasingly used to turn natural-language prom
 ---
 
 ## Subject Program Design
-- 🧩 **Programs:** 31 Arduino tasks, each with **two optimized reference solutions** (to reflect developer variation).
-- 🧠 **Coverage:** Data types, control structures, functions, arrays, loops, sensors, and more.
-- 📟 **Platform:** Arduino Uno Rev3; **Arduino IDE 2.3.5** for compilation & memory usage readouts.
-- 🔧 **Reference Solutions:** Crafted for performance and reliability; some favor memory use, others speed.
+- **Programs:** 31 Arduino tasks, each with **two optimized reference solutions** (to reflect developer variation).
+- **Coverage:** Data types, control structures, functions, arrays, loops, sensors, and more.
+- **Platform:** Arduino Uno Rev3; **Arduino IDE 2.3.5** for compilation & memory usage readouts.
+- **Reference Solutions:** Crafted for performance and reliability; some favor memory use, others speed.
 
 Each task is paired with a consistent **zero-shot prompt** to ensure fair model comparison.
 
