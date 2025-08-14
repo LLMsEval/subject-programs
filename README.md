@@ -17,42 +17,13 @@ Each task is paired with a consistent **zero-shot prompt** to ensure fair model 
 
 ## Purpose of the Study
 We evaluate four LLMs across **five** dimensions:  
-1) Functional Correctness, 2) Runtime Efficiency, 3) Flash/SRAM Usage, 4) Code Complexity (Cyclomatic Complexity, NCLOC), 5) Code Similarity (CodeBLEU), including **multi-round error correction** where needed.
+1) Functional Correctness, 2) Runtime Efficiency, 3) Flash/SRAM Usage, 4) Code Complexity (Cyclomatic Complexity, NCLOC), 5) Code Similarity (CodeBLEU).
 
 ### Key Findings (Short)
 - **Speed & Similarity:** Standard LLMs (GPT-4o, DeepSeek-V3) generally run **faster** and are **closer to human code**.  
 - **Memory:** Reasoning LLMs (GPT-o4-mini, DeepThink R1) are **more memory-efficient** (flash & SRAM).  
 - **Complexity:** Reasoning LLMs tend to produce **more complex and verbose** code (higher CC and NCLOC).  
 - **Trade-off:** Clear trade-off between **execution speed** and **memory savings**; consider a **hybrid** workflow.
-
----
-
-## Repository Structure
-```
-.
-├─ tasks/
-│  ├─ task01_blink/
-│  │  ├─ reference_solution_A.ino
-│  │  ├─ reference_solution_B.ino
-│  │  ├─ prompt.txt
-│  │  └─ expected_behavior.md
-│  ├─ task02_serial_.../
-│  └─ ... (31 total)
-├─ generated/
-│  ├─ gpt4o/
-│  ├─ deepseek_v3/
-│  ├─ gpt_o4_mini/
-│  └─ deepthink_r1/
-├─ evaluation/
-│  ├─ results_raw.csv
-│  ├─ results_summary.csv
-│  ├─ metrics/           # CC, NCLOC (Lizard), memory, time, CodeBLEU
-│  └─ scripts/           # helpers to compile, flash, measure, parse
-├─ tools/
-│  ├─ lizard/            # CC & NCLOC (external tool wrapper)
-│  └─ codexglue_codebleu # CodeBLEU wrapper
-└─ README.md
-```
 
 ---
 
@@ -99,35 +70,4 @@ Use the provided `prompt.txt` for each task. Prompts follow a fixed, model-frien
 
 > **Takeaway:** Choose **standard LLMs** for performance-critical work and **reasoning LLMs** for memory-constrained scenarios—or combine them: generate with a reasoning model, then **refactor/tune** for speed and readability.
 
----
 
-## Prompt Structure
-Each task ships with a zero-shot prompt that fixes role, board, task, and optimization intent:
-
-```
-You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that [task].
-Only write the code and ensure it’s optimized for best performance.
-```
-*(Replace `[task]` with the natural-language task description.)*
-
----
-
-## Citing This Work
-If you use this repository, please cite the paper:
-
-> Sardar K. Jabrw, Qusay I. Sarhan. **Evaluating Reasoning Capabilities of Large Language Models for Arduino Code Generation**. [Research paper; details in manuscript.]
-
----
-
-## License
-Please refer to the repository’s LICENSE file (or specify your desired license here).
-
----
-
-## Contact
-For questions about tasks, prompts, or reproduction details, please contact the authors (see manuscript).
-
----
-
-### Acknowledgments
-No human/animal studies; no external funding; no conflicts of interest declared in the manuscript.
