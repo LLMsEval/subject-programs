@@ -1,0 +1,10 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that prints 'Reading DHT11 sensor:' as a string stored in the flash memory instead of the SRAM.
+// Strategy 1
+
+void setup() {
+startTime= micros();
+Serial.begin(9600);
+Serial.println( F("Reading DHT11 sensor:") );
+}
+void loop() {
+}

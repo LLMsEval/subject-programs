@@ -1,0 +1,10 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that finds and returns the smaller number between 1000 and 2000.
+// Strategy 1
+
+#define minNum(a,b) (a<b?a:b)
+void setup() {
+Serial.begin(9600);
+int result=minNum(1000,2000);
+Serial.println(result);
+}
+void loop() {}

@@ -1,0 +1,9 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that declare the digital pin number 2 as an output, then turn ON the specified pin, then turn OFF the specified pin.
+// Strategy 1
+
+void setup() {
+DDRD = DDRD | B00000100;
+PORTD = PORTD | B00000100;
+PORTD = PORTD & ~(B00000100);
+}
+void loop() {}

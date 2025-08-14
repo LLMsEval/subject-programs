@@ -1,0 +1,10 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that initializes a 10×10 array with all elements set to 5.
+// Strategy 2
+
+void setup() {
+byte size=10, a[size][size];
+for( byte i =0; i <size; i ++)
+for( byte j =0; j <size; j ++)
+a[ i ] [ j ] = 5 ;
+}
+void loop() {}

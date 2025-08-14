@@ -1,0 +1,20 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that defines an array of five strings: "element1", "element2", "element3", "element4", and "element5", and then search in the array for element "element2", and prints true if found or false otherwise.""
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+bool result=false;
+String msg[5] =
+{
+"element1",
+"element2",
+"element3",
+"element4",
+"element5"
+};
+for(byte i=0;i<5;i++)
+if(msg[i]=="element2")
+result=true;
+Serial.println(result ? "true" : "false");
+}
+void loop() {}

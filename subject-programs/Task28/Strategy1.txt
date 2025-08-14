@@ -1,0 +1,12 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that initializes a string, set it to “Pin Number”, then append “1:”, then append “is working well”, finally print it.
+// Strategy 1
+
+void setup() {
+Serial.begin(9600);
+String str;
+str = "Pin Number";
+str +="= 1: ";
+str +="is working well";
+Serial.println(str);
+}
+void loop() {}

@@ -1,0 +1,16 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that defines an array of five strings: "element1", "element2", "element3", "element4", and "element5", and then prints the third element of the array.
+// Strategy 1
+
+void setup() {
+Serial.begin(9600);
+char * msg[5] =
+{
+"element1",
+"element2",
+"element3",
+"element4",
+"element5"
+};
+Serial.println(msg[2]);
+}
+void loop() {}

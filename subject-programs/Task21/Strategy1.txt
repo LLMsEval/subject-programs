@@ -1,0 +1,15 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that configures digital pins 0 to 7 as output pins.
+// Strategy 1
+
+void setup() {
+pinMode(0, OUTPUT);
+pinMode(1, OUTPUT);
+pinMode(2, OUTPUT);
+pinMode(3, OUTPUT);
+pinMode(4, OUTPUT);
+pinMode(5, OUTPUT);
+pinMode(6, OUTPUT);
+pinMode(7, OUTPUT);
+}
+void loop() {
+}

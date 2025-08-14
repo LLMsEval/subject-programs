@@ -1,0 +1,13 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that initializes an array of 99 elements, sets each element to 2, then sums up all the elements, and finally prints the total sum.
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+int sum=0, a[100];
+for(int i=0;i<100;i++)
+a[i]=2;
+for(int i=0;i<100;i++)
+sum=sum+a[i];
+Serial.println(sum);
+}
+void loop() {}

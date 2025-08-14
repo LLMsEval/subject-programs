@@ -1,0 +1,14 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that defines a structure with two integer variables (x and y), initializes them to 1000, calculates their sum, and prints the result.
+// Strategy 2
+
+struct add{
+int x=1000, y=1000, sum;
+};
+void setup() {
+startTime= micros();
+Serial.begin(9600);
+add s;
+s.sum=s.x+s.y;
+Serial.println(s.sum);
+}
+void loop() {}

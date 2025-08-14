@@ -1,0 +1,11 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that activates a buzzer connected to pin 2, producing a 500 Hz sound for 100 milliseconds, then stops the sound.
+// Strategy 1
+
+void setup() {
+byte buzzerPin=2;
+pinMode(buzzerPin, OUTPUT);
+tone(buzzerPin,500);
+delay(100);
+noTone(buzzerPin);
+}
+void loop() {}

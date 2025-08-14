@@ -1,0 +1,9 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that declares a string constant with the value 'com1' and prints it.
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+const String devicePort="com1";
+Serial.println(devicePort);
+}
+void loop() {}

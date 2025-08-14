@@ -1,0 +1,19 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that gradually increases (0 to 255) and then decreases (255 to 0) the brightness of an LED connected to pin 9”
+// Strategy 2
+
+void setup() {
+byte pin=9;
+pinMode(pin, OUTPUT);
+for(int i=0;i<=255;i++)
+{
+analogWrite(pin, i);
+delay(10);
+}
+for(int i=255;i>=0;i--)
+{
+analogWrite(pin, i);
+delay(10);
+}
+}
+void loop() {
+}

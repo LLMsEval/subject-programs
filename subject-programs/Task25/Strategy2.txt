@@ -1,0 +1,10 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that defines an array of six character (a, b, c, d, e, and f), then prints each character from the array on a new line.
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+char charArray[]={'a','b','c','d','e','f'};
+for(byte i = 0; i<6; i++)
+Serial.println(charArray[i]);
+}
+void loop() {}

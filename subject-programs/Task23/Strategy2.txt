@@ -1,0 +1,15 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that creates a function doAdd which add two integers, and return the result, then print the result.
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+int (*fp)(int,int)=&doAdd;
+int result=(*fp)(10000,500);
+Serial.println(result);
+}
+void loop() {
+}
+int doAdd(int x, int y)
+{
+return x+y;
+}

@@ -1,0 +1,13 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that initializes a 10×10 array with all elements set to 1, then calculates the sum of all elements in the array and prints the result.
+// Strategy 1
+
+void setup() {
+Serial.begin(9600);
+byte a[10][10], sum=0;
+memset(a,1,sizeof(a));
+for(byte i=0;i<10;i++)
+for(byte j=0;j<10;j++)
+sum=sum+a[i][j];
+Serial.println(sum);
+}
+void loop() {}

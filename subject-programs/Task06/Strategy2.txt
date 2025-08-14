@@ -1,0 +1,27 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that find text/word (text) in a given string (this is a simple text sentence), if found print (Word found). otherwise, print (Word not found.) .
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+String sentence="This is a simple text sentence";
+String word="text";
+bool result=false;
+byte wordLen=word.length();
+byte diffLen=sentence.length()-wordLen;
+for(byte i=0;i<=diffLen;i++) 
+   if(sentence.substring(i,wordLen+i)==word) 
+      {
+        result=true;
+        break;
+      }
+
+  if (result) {
+    Serial.println("Word found.");
+  } else {
+    Serial.println("Word not found.");
+  }
+
+}
+
+void loop() {}
+

@@ -1,0 +1,11 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that merges two strings and prints the output.
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+String str1="ab";
+String str2="cd";
+String str3 = str1 + str2;
+Serial.println(str3);
+}
+void loop() {}

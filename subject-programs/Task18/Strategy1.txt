@@ -1,0 +1,20 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that initializes an array of 100 structures, each structure contains three variables (x, y, and z). Then assigns value 1 for all elements, and then calculates the sum of all elements before printing the result.””
+// Strategy 1
+
+const int size = 100;
+int arr[size];
+void setup() {
+Serial.begin(9600);
+byte i, x[100],y[100],z[100];
+int sum=0;
+for (i = 0; i < 100; i++)
+{
+x[i] = 1;
+y[i] = 1;
+z[i] = 1;
+}
+for (i = 0; i < 100; i++)
+sum=sum+x[i]+y[i]+z[i];
+Serial.println(sum);
+}
+void loop() {}

@@ -1,0 +1,12 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that prints "Task", waits 100ms, then prints "Task" again.
+// Strategy 1
+
+void setup() {
+Serial.begin(9600);
+byte timePeriod = 100;
+Serial.println("Task");
+delay(timePeriod);
+Serial.println("Task");
+}
+void loop() {
+}

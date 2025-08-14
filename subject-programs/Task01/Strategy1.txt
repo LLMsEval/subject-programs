@@ -1,0 +1,10 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that prints a newline.
+// Strategy 1
+
+void setup()
+{
+Serial.begin(9600);
+Serial.print('\n');
+}
+void loop()
+{}

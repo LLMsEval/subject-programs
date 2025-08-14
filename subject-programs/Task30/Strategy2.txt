@@ -1,0 +1,24 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that performs a basic arithmetic operation based on the value of the character c. If c is '+', it should add two numbers (1000 and 500). If c is '-', it should subtract them, if c is ‘/’ it should divide them. Otherwise, assigns -1 to the result. Then print the final result. Set c to ‘-‘.”
+// Strategy 2
+
+int doSum(int x,int y)
+{
+return x+y;
+}
+int doSub(int x,int y)
+{
+return x-y;
+}
+void setup() {
+Serial.begin(9600);
+char c='-';
+int result;
+switch(c)
+{
+case '+': result=doSum(1000,500);break;
+case '-': result=doSub(1000,500);break;
+default: result=-1;
+}
+Serial.println(result);
+}
+void loop() {}

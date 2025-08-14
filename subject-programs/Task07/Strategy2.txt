@@ -1,0 +1,13 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that checks if a selected size which is MEDIUM matches a one of a predefined values (SMALL, MEDIUM, LARGE). If it matches MEDIUM, set a variable to true; otherwise, remain false. Finally, print the result (Match or No match). Set the selected size to SMALL.
+// Strategy 2
+
+void setup() {
+Serial.begin(9600);
+String SMALL = "SMALL", MEDIUM = "MEDIUM", LARGE = "LARGE";
+bool result=false;
+String selectedSize = "SMALL";
+if (selectedSize.equals(MEDIUM) )
+result=true;
+Serial.println(result ? "Match" : "No match");
+}
+void loop() {}

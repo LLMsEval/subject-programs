@@ -1,0 +1,10 @@
+// You are an experienced software developer. Write an optimized Arduino Uno Rev3 code that converts a char array to a string and print the output.
+// Strategy 1
+
+void setup() {
+Serial.begin(9600);
+char x[]="Port COM1";
+String s=String(x);
+Serial.println(s);
+}
+void loop() {}
