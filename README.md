@@ -36,7 +36,7 @@ We evaluate four LLMs across **five** dimensions:
 ---
 
 ## Evaluation Metrics & How We Measure
-- **Execution Time:** Measured by inserting a timer into each test program and computing `elapsed = end - start`.  
+- **Execution Time:** Measured by inserting a timer into each test program and computing elapsed = end - start.  
 - **Flash/SRAM:** Read from Arduino IDE compile output (sketch size & global variables).  
 - **Complexity:** **Cyclomatic Complexity (CC)** and **NCLOC** computed with **Lizard**.  
 - **Similarity:** **CodeBLEU** (n-gram, syntax, data-flow, semantic components).
@@ -46,7 +46,7 @@ We evaluate four LLMs across **five** dimensions:
 ## Reproducing the Experiments
 
 ### 1) Generate Code from Prompts
-Use the provided `prompt.txt` for each task. Prompts follow a fixed, model-friendly format (see **Prompt Structure** below). Store model outputs under `generated/<model>/<task>/solution_X.ino`.
+Use the provided prompt for each task. Prompts follow a fixed, model-friendly format (see **Prompt Structure** below). Store model outputs.
 
 ### 2) Compile & Measure
 - Compile with **Arduino IDE 2.3.5** for memory stats (flash & SRAM).  
@@ -54,7 +54,7 @@ Use the provided `prompt.txt` for each task. Prompts follow a fixed, model-frien
 
 ### 3) Check Correctness
 - **Syntactic correctness:** successful compile.  
-- **Functional correctness:** behavior matches `expected_behavior.md`. Failed runs enter a **feedback loop** (compiler messages + manual hints) before re-prompting the model. Record attempts until a correct solution is obtained.
+- **Functional correctness:** behavior matches. Failed runs enter a **feedback loop** (compiler messages + manual hints) before re-prompting the model. Record attempts until a correct solution is obtained.
 
 ### 4) Compute Complexity & Similarity
 - Run **Lizard** to capture **CC** and **NCLOC**.  
